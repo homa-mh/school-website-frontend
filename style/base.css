@@ -1,0 +1,69 @@
+/* vazir font: */
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/vazir/Vazir.eot');
+    src: url('../fonts/vazir/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/vazir/Vazir.woff') format('woff'),
+         url('../fonts/vazir/Vazir.ttf') format('truetype');
+    font-weight: normal;
+  }
+        
+  @font-face {
+    font-family: Vazir;
+    src: url('../fonts/vazir/Vazir-Bold.eot');
+    src: url('../fonts/vazir/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/vazir/Vazir-Bold.woff') format('woff'),
+         url('../fonts/vazir/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: Vazir;
+    src: url('../fonts/vazir/Vazir-Light.eot');
+    src: url('../fonts/vazir/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/vazir/Vazir-Light.woff') format('woff'),
+         url('../fonts/vazir/Vazir-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+
+  /* shabnam font: */
+
+  @font-face {
+    font-family: Shabnam;
+    src: url('../fonts/Shabnam/Shabnam.eot');
+    src: url('../fonts/Shabnam/Shabnam.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Shabnam/Shabnam.woff') format('woff'),
+         url('../fonts/Shabnam/Shabnam.ttf') format('truetype');
+    font-weight: normal;
+  }
+        
+  @font-face {
+    font-family: Shabnam;
+    src: url('../fonts/Shabnam/Shabnam-Bold.eot');
+    src: url('../fonts/Shabnam/Shabnam-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Shabnam/Shabnam-Bold.woff') format('woff'),
+         url('../fonts/Shabnam/Shabnam-Bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: Shabnam;
+    src: url('../fonts/Shabnam/Shabnam-Light.eot');
+    src: url('../fonts/Shabnam/Shabnam-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Shabnam/Shabnam-Light.woff') format('woff'),
+         url('../fonts/Shabnam/Shabnam-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+
+  /* now, css for all pages: */
+
+body{
+    font-family: 'Vazir', 'Shabnam', sans-serif;
+    font-weight: normal;
+    box-sizing: border-box;
+  }
+
+button{
+    font-family: 'Vazir', 'Shabnam', sans-serif;
+    font-weight: normal;
+  }

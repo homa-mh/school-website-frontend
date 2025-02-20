@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Redirect Example</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/base.css">
+    
+</head>
+<body dir="rtl">
+    <div class="login_form">
+        <div class="div_log">
+            <div class="img_login">
+                <img src="images/login2.png" alt="login" class="img">
+            </div>
+            <div class="login_name">
+                <span class="l_name">خوش آمدید</span>
+            </div>
+        </div>
+        <div class="divs">
+            <label for="karbari" class="lblkarbari">نوع کاربری :</label>       
+            <select id="mySelect" >
+                <option value="">نوع کاربری</option>
+                <option value="option1">دانشجو</option>
+                <option value="option2">کادر اداری</option>
+            </select>
+        </div>
+        <div class="divs">
+            <label id="lbl_name">نام کاربری: </label>
+            <input type="text" class="input_name" required>
+        </div>
+        <div class="divs">
+            <p id="lbl_name"> رمز عبور:</p>
+            <input type="password" class="input_code" required>
+        </div>
+    
+        <div class="divs" id="div_btn">
+            <a href="main.html" class="a-sub"><button id="myButton" type="submit">ثبت نام</button></a>
+        </div>
+
+    </div>
+  
+    <script src="js/login.js"></script>
+</body>
+</html>

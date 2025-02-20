@@ -1,0 +1,122 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* css for the Karnameh */
+.reportCard{
+    width: 80%;
+    margin: auto;
+}
+table{
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 7px#5c6972;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+}
+td{
+    padding: 0.7em;
+    text-wrap: nowrap;
+}
+
+tr:nth-child(even){
+    background-color: #d5d5d5;
+}
+
+.trLogo, .trInfo, .trTitle, .trEnd{
+
+    background-color: #5c6972 !important;
+    color: white;
+}
+
+
+#schoolLogo{
+    display: inline-block;
+    margin: auto;
+    width: 40px;
+    height: 45px;
+}
+#schoolName{
+    display:inline-block;
+    transform: translateY(-1em);
+}
+
+.performance{
+    font-weight: bolder;
+}
+
+
+
+
+/* for the button : */
+.btnDownload{
+    display: block;
+    margin: 50px auto auto;
+    width: 12em;
+    background-color: #050834;
+    border-radius: 20px;
+    border: #3a63a8 solid 1px;
+    padding: 10px;
+    color: #d5d5d5;
+    transition: transform 0.25s;
+
+}
+a{
+    text-decoration: none;
+}
+.btnDownload:hover{
+    background-color: #7cb8f2;
+    color: #050834;
+    transform: scaleX(1.1);
+}
+
+#stuChart, #classChart {
+    width: 70%;
+    margin: auto;
+    border: 1px solid #3a63a8;
+    border-radius: 1rem;
+    background: #d5d5d5;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+}
+
+/* #stuChart{
+    margin-top: 80px;
+    margin-bottom: 30px;
+} */
+
+/* .divCHarts{
+    display: block;
+    width: 100%;
+} */
+
+
+
+/* now time to make it respondive */
+@media screen and (max-width:1280px) {
+    table{
+        width: 90%;
+    }
+    .btnDownload:active{
+        background-color: #7cb8f2;
+        color: #050834;
+        transform: scaleX(1.1);
+    }
+}
+
+@media screen and (max-width:980px) {
+    table {
+        width: 90%;
+        font-size: 12px;
+        /* display: none; */
+    }
+    .reportCard{
+        overflow-x: auto;
+    }
+    td{
+        padding: 4px;
+    }
+   
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/profile.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/base.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/profile.js"></script>
+    
+    <title>User_Profile</title>
+</head>
+<body dir="rtl">
+    <header class="header" dir="ltr">
+        <div class="head">
+            <img src="images/bell.png" alt="" class="bell">
+            <img src="images/flash.png" alt="" class="flash">
+            <img src="images/person_icon.png" alt=""class="person-pic">
+            <span class="name">نام کاربر</span>
+        <i class="bx bx-menu" id="btn"></i>
+        <img src="images/logo.png" alt="" class="uni">
+
+        </div>
+    </header>
+    <div class="sidebar">
+
+        <ul>
+            <li>
+                <a href="profile.html">
+                    <i class="bx bx-user"></i>
+                    <span class="nav-item">پروفایل</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule.html">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="nav-item">برنامه</span>
+                </a>
+            </li>
+            <li>
+                <a href="quizList.html">
+                    <i class="bx bx-food-menu"></i>
+                    <span class="nav-item">آزمون</span>
+                </a>
+            </li>
+            <li>
+                <a href="reportCard.html">
+                    <i class="bx bx-list-check"></i>
+                    <span class="nav-item">کارنامه</span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html">
+                    <i class="bx bx-log-out"></i>
+                    <span class="nav-item">خروج</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <div id="main_profile">
+            <h1 class="user_labl">حساب کاربری</h1>
+            <a href="main.html" target="_self" id="only_a" >صفحه اصلی</a>
+            <label class="label3">/مدیریت حساب کاربری</label>
+            <div class="sec_profile" id="sec_profile">
+                <div class="left">
+                    <div class="div_pro">
+                        <img src="images/user1.png" alt="user image" class="user" >
+                        <image class="img_icon_user" src="images/camera_icon2.png" ></image>
+                        <span class="u_name"> نام کاربر </span>
+
+                    </div>
+                    <div class="div_left">
+                        <image class="img_icon" src="images/backpak_icon.png"></image>
+                        <label class="label1">نام مدرسه:</label>
+                        <label class="label_sch">علوی</label>
+                    </div>
+                    <div class="div_left">
+                        <image class="img_icon" src="images/azmon_icon.png"></image>
+                        <label class="label1">تعداد آزمون داده شده:</label>
+                        <label class="label_azmon">5</label>
+                    </div>
+                    <div class="div_detail">
+                        <button class="btn_detail" type="button" onclick="detail()" >مشاهده جزئیات</button>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <h2 class="h2">تنظیمات عمومی</h2>
+                    <hr class="hr1">
+                    <div class="details">
+                        <div class="D">
+                            <label id="lbl_user_n" class="lbl"> نام کاربری:</label>
+                            <input type="text" class="detail">
+                        </div>
+                        <div class="D">
+                            <label id="lbl_email" class=""> ایمیل:</label>
+                            <input type="email" class="detail">
+                        </div>
+                        <div class="D">
+                            <label id="lbl_ramz" class="">رمز عبور:</label>
+                            <input type="password" class="detail">
+                        </div>
+                    </div>
+                </div>
+                <div id="new_details">
+                    <div class="D">
+                        <label id="lbl_user_n" class="lbl" > آدرس:</label>
+                        <input type="text" class="detail">
+                    </div>
+                    <div class="D">
+                        <label id="lbl_email" class="">شماره تماس:</label>
+                        <input type="number" class="detail" maxlength="11" minlength="11" placeholder="0912-123-1234">
+                    </div>
+                    <div class="D">
+                        <label id="lbl_ramz" class="">کد ملی:</label>
+                        <input type="number" class="detail" value="6665565853" disabled>
+                    </div>
+                </div>
+            </div>
+        <button class="sumbit" type="submit" >ثبت تغییرات</button>
+            </a>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

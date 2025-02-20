@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Redirect Example</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/login.css" >
+    <link rel="stylesheet" href="style/base.css">
+</head>
+<body dir="rtl">
+    <div class="login_form" id="login_form">
+        <div class="divs">
+            <img src="images/imglog.png" alt="login" class="img">
+        </div>
+        <div class="divs">
+            <span class="l_name">ورود</span>
+        </div>
+        <div class="divs">
+            <label for="karbari" class="lblkarbari">نوع کاربری :</label>       
+            <select id="mySelect">
+                <option value="">نوع کاربری</option>
+                <option value="option1">دانشجو</option>
+                <option value="option2">کادر اداری</option>
+            </select>
+        </div>
+        <div class="divs">
+            <label for="" id="lbl_name"> نام و نام خانوادگی:</label>
+            <input type="text" class="input_name" id="input_name" required id="input_name" minlength="3">
+        </div>
+        <div class="divs">
+            <label for="" id="lbl_code">کد ملی:</label>
+            <input type="number" class="input_code" id="input_code" maxlength="10" minlength="10" required>
+        </div>
+    
+        <div class="divs" id="div_btn">
+            <button id="myButton" >ورود</button>
+        </div>
+        <div class="divs">
+            <div class="div_q">          
+                <span class="register">حساب کاربری نداری؟</span>
+                <a href="register.html"> کلید کن!</a>
+            </div>
+        </div>
+
+    </div>
+  
+    <script src="js/login.js"></script>
+</body>
+</html>

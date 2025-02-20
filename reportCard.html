@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fa-ir">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کارنامه</title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/reportCard.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script>
+        function tableLoad(){
+
+            let scores = document.getElementsByClassName("score")
+
+            // to calulate the GPA :
+            let gpa = document.getElementById("gpa")
+            let average = 0
+            let count = 0
+            // to calculate the finalRank :
+            let totalLevel = document.getElementById("totalLevel")
+            let levels = document.getElementsByClassName("level")
+            let level = 0
+            // to calculate the performance column :
+            let performances = document.getElementsByClassName("performance")
+
+            for (let i = 0; i < scores.length; i++) {
+
+                average += (Number)(scores[i].innerHTML)
+                count ++
+
+                level += (Number)(levels[i].innerHTML)
+
+                if(scores[i].innerHTML>= 18.5){
+                    performances[i].innerHTML= "عالی"
+                    performances[i].style.color = "#00c04b"
+                }
+                else if (scores[i].innerHTML >= 17){
+                    performances[i].innerHTML= "خوب"
+                    performances[i].style.color = "#e6b400"
+                }
+                else if(performances[i].innerHTML< 17){
+                    performances[i].innerHTML= "ضعیف"
+                    performances[i].style.color = "#de0a26"
+                }
+                else{
+                    return;
+                }
+               
+            }
+
+            average = average/count
+            gpa.innerText = average.toFixed("2")
+
+            level = level/count
+            totalLevel.innerText = Math.round(level)
+        }
+    </script>
+</head>
+<body dir="rtl" onload="tableLoad()">
+    <header class="header" dir="ltr">
+        <div class="head">
+            <img src="images/bell.png" alt="" class="bell">
+            <img src="images/flash.png" alt="" class="flash">
+            <a href="profile.html">
+            <img src="images/person_icon.png" alt=""class="person-pic">
+            <span class="name">نام کاربر</span></a>
+            <i class="bx bx-menu" id="btn"></i>
+            <img src="images/logo.png" alt="" class="uni">
+
+        </div>
+    </header>
+    <div class="sidebar">
+
+        <ul>
+            <li>
+                <a href="profile.html">
+                    <i class="bx bx-user"></i>
+                    <span class="nav-item">پروفایل</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule.html">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="nav-item">برنامه</span>
+                </a>
+            </li>
+            <li>
+                <a href="quizList.html">
+                    <i class="bx bx-food-menu"></i>
+                    <span class="nav-item">آزمون</span>
+                </a>
+            </li>
+            <li>
+                <a href="reportCard.html">
+                    <i class="bx bx-list-check"></i>
+                    <span class="nav-item">کارنامه</span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html">
+                    <i class="bx bx-log-out"></i>
+                    <span class="nav-item">خروج</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="reportCard">
+        <table>
+            <tr class="trLogo">
+                <td colspan="8">
+                    <img src="images/logoWhite.png" alt="logo" id="schoolLogo">
+                    <p id="schoolName">مدرسه شریعتی</p>
+                </td>
+            </tr>
+            <tr class="trInfo">
+                <td>نام و نام خانوادگی:</td>
+                <td id="stuName">نام کاربر</td>
+                <td>کد ملی:</td>
+                <td id="nationalCode">1234567890</td>
+                <td>مقطع تحصیلی:</td>
+                <td id="grade">12</td>
+                <td>رشته تحصیلی:</td>
+                <td id="fieldStudy">ریاضی</td>
+            </tr>
+            <tr class="trTitle">
+                <td>ردیف</td>
+                <td colspan="3">نام درس</td>
+                <td>نمره</td>
+                <td>تراز</td>
+                <td>رتبه</td>
+                <td>عملکرد</td>
+            </tr>
+            <tr class="trScore">
+                <td class="row">1</td>
+                <td class="courseName" colspan="3">ریاضی3</td>
+                <td class="score">18</td>
+                <td class="level">7500</td>
+                <td class="rank">10</td>
+                <td class="performance"></td>
+            </tr>
+            <tr class="trScore">
+                <td class="row">2</td>
+                <td class="courseName" colspan="3">فیزیک3</td>
+                <td class="score">17</td>
+                <td class="level">6400</td>
+                <td class="rank">8</td>
+                <td class="performance"></td>
+            </tr>
+            <tr class="trScore">
+                <td class="row">3</td>
+                <td class="courseName" colspan="3">شیمی3</td>
+                <td class="score">19</td>
+                <td class="level">10000</td>
+                <td class="rank">1</td>
+                <td class="performance"></td>
+            </tr>
+            <tr class="trScore">
+                <td class="row">4</td>
+                <td class="courseName" colspan="3">هندسه3</td>
+                <td class="score">15</td>
+                <td class="level">10000</td>
+                <td class="rank">1</td>
+                <td class="performance"></td>
+            </tr>
+            <tr class="trScore">
+                <td class="row">5</td>
+                <td class="courseName" colspan="3">حسابان2</td>
+                <td class="score">20</td>
+                <td class="level">10000</td>
+                <td class="rank">1</td>
+                <td class="performance"></td>
+            </tr>
+            <tr class="trScore">
+                <td class="row">6</td>
+                <td class="courseName" colspan="3">ریاضیات گسسته</td>
+                <td class="score">17.5</td>
+                <td class="level">5450</td>
+                <td class="rank">14</td>
+                <td class="performance"></td>
+            </tr>
+            <tr class="trScore">
+                <td class="row">7</td>
+                <td class="courseName" colspan="3">ادبیات فارسی</td>
+                <td class="score">18.75</td>
+                <td class="level">8000</td>
+                <td class="rank">5</td>
+                <td class="performance"></td>
+            </tr>
+            <tr class="trScore">
+                <td class="row">8</td>
+                <td class="courseName" colspan="3">عربی</td>
+                <td class="score">16</td>
+                <td class="level">4500</td>
+                <td class="rank">22</td>
+                <td class="performance"></td>
+            </tr>
+            <tr class="trScore">
+                <td class="row">9</td>
+                <td class="courseName" colspan="3">زبان انگلیسی</td>
+                <td class="score">20</td>
+                <td class="level">10000</td>
+                <td class="rank">1</td>
+                <td class="performance"></td>
+            </tr>
+            <tr class="trScore">
+                <td class="row">10</td>
+                <td class="courseName" colspan="3">دینی</td>
+                <td class="score">19</td>
+                <td class="level">9400</td>
+                <td class="rank">3</td>
+                <td class="performance"></td>
+            </tr>
+            <tr class="trChart">
+                <td colspan="8">
+
+                        <!-- این قسمت از کد های آماده استفاده شده
+                        منبع :
+                        https://abhijeetpratap.com/posts/stacked-bar-chart-in-chart-js/
+                         -->
+
+                        <script src="
+                         https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+                        <div>
+                            <canvas id="stuChart"></canvas>
+                        </div> 
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+                        <script src="js/stuChart.js"></script>
+              </td>
+             </tr>
+            <tr class="trChart">
+                <td colspan="8">
+                        <div>
+                            <canvas id="classChart"></canvas>
+                        </div> 
+                       <script src="js/classChart.js"></script>
+              </td>
+            </tr>
+            <tr class="trEnd">
+                <td>معدل:</td>
+                <td id="gpa"></td>
+                <td>تراز کل:</td>
+                <td id="totalLevel"></td>
+                <td>رتبه کل:</td>
+                <td id="finalRank">9</td>
+                <td>عملکرد کلی:</td>
+                <td id="finalPerformance">دارای پیشرفت</td>
+            </tr>
+        </table>
+    </div>
+    <a href="#"><button class="btnDownload">دانلود کارنامه</button></a>
+
+
+    <div class="divCharts">
+
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

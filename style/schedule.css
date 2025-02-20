@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*  برنامه کلاس ها: */
+.schedule{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+table{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    /* border-collapse: collapse; */
+    border-spacing: 0;
+    background-image: url(../images/board.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-style: hidden;
+}
+
+td,th{
+    padding: 2px;
+    border: 1px solid rgba(256, 256, 256, 0.3) ;
+}
+th{
+    color: #000;
+    background-color: rgba(256, 256, 256, 0.3);
+}
+
+table tr:first-child th:first-child {
+     border-top-right-radius: 10px;
+     }
+
+table tr:first-child th:last-child {
+     border-top-left-radius: 10px;
+     }
+
+table tr:last-child th:first-child {
+     border-bottom-right-radius: 10px;
+     }
+
+table tr:last-child td:last-child {
+     border-bottom-left-radius: 10px; 
+    }
+
+
+/* 
+فهرست کارها:
+این قسمت از منبع زیر گرفته شده:
+https://github.com/lakshitha200/ToDo_App_with_Local_Storage
+*/
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.box{
+    max-width: 440px;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.todo-app{
+    background-image: linear-gradient(#d5d5d5,#5c6972);
+    width: 100%;
+    padding: 20px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 440px;
+    height: 80vh;
+}
+
+.title{
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+.title img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    height: 10%;
+    display: flex;
+    width: 100%;
+    padding-top: 7px;
+}
+#input-box{
+    flex:1;
+    height: 30px;
+    padding: 0 10px;
+}
+button{
+    border: none;
+    outline: none;
+    background-color: #050834;
+    padding: 0 10px;
+    margin-left: 3px;
+    color: #d5d5d5;
+    cursor: pointer;
+    height: 30px;
+    
+}
+button:hover{
+    background-color: #7cb8f2;
+    color: #050834;
+}
+
+.scroll{
+    height: 80%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.scroll li{
+    position: relative;
+    list-style: none;
+    padding: 7px 5px;
+    padding-left: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.scroll li::before{
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #000;
+    left: 5px;
+    
+}
+
+
+
+.scroll li.checked{
+    color: #5f5f5f;
+    text-decoration: line-through;
+}
+.scroll .checked::before{
+    background-image: url(../images/check.png);
+    border: none;
+}
+
+.scroll li:hover{
+    background-color: #d4d4d4;
+    border-radius: 30px;
+}
+
+.close{
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    margin-left: 7px;
+    margin-right: 10px;
+
+}
+
+.data{
+    width: 440px;
+    position: relative;
+}
+
+
+
+@media screen and (max-width:489px) {
+
+    .container{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .box{
+        max-width: 340px;
+        width: 100%;
+    }
+    
+    .todo-app{
+        width: 340px;
+    }
+
+    table{
+        font-size: 12px;
+        padding: 30px;
+        /* display: none; */
+    }
+}
+
+@media screen and (max-width:365px) {
+
+
+    table{
+        font-size: 8px;
+        padding: 30px;
+        /* display: none; */
+    }
+}
+@media screen and (max-width:280px) {
+
+
+    table{
+        font-size: 10px;
+        background-image: none;
+        background-color: #050834;
+        color: #d5d5d5;
+        border-radius: 10px;
+        padding: 0%;
+    }
+}
+

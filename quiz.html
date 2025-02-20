@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fa-ir">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آزمون</title>
+    <link rel="stylesheet" href="style/quiz.css">
+    <link rel="stylesheet" href="style/base.css">
+    <script src="js/quiz.js"></script>
+</head>
+<body dir="rtl" onload="quizLoad()">
+    <div class="main">
+        <div class="header">
+            <div class="divTitle">
+                <h1 id="quizName">آزمون حسابان2</h1>
+                <p id="date"></p>
+                <script>
+                    let dateTxt = document.getElementById("date")
+                    const date = new Date()
+                    const option = {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    }
+                    dateTxt.innerHTML=date.toLocaleDateString("fa-ir", option)
+
+                </script>
+            </div>
+            <div class="divTime">
+                <img class="timeIcon" src="icons/time.png" alt="">
+                <p>زمان باقی مانده:</p>
+                <p id="time">
+                    <script>
+                        let minute = 20
+                        let seconds = 0
+                        let timer = setInterval(function(){
+                            let timerP = document.getElementById("time").innerHTML=minute+":"+seconds
+                            seconds--
+                            if(minute==0 && seconds<0)
+                                clearInterval(timer)
+                            if(seconds<0)
+                            {
+                                seconds=59
+                                minute--
+                            }
+
+                        },1000)
+                    </script>
+                </p>
+            </div>
+        </div>
+        <hr class="hrHeader">
+        <div class="section">
+            <div class="questions">
+                <ol class="olQuestions">
+                    <li class="liQuetions">
+                        حاصل 6+23 چند میشود؟
+                        <ol class="olAnswers">
+                            <li class="liAnswers">29</li>
+                            <li class="liAnswers">17</li>
+                            <li class="liAnswers">20</li>
+                            <li class="liAnswers">25</li>
+                        </ol>
+                    </li>
+                    <hr>
+                    <li class="liQuetions">
+                        حاصل 10+10 چند است؟
+                        <ol class="olAnswers">
+                            <li class="liAnswers">100</li>
+                            <li class="liAnswers">20</li>
+                            <li class="liAnswers">30</li>
+                            <li class="liAnswers">0</li>
+                        </ol>
+                    </li>
+                    <hr>
+                    <li class="liQuetions">
+                        حاصل 4*2+7 چند میشود؟
+                        <ol class="olAnswers">
+                            <li class="liAnswers">36</li>
+                            <li class="liAnswers">30</li>
+                            <li class="liAnswers">14</li>
+                            <li class="liAnswers">15</li>
+                        </ol>
+                    </li>
+                    <hr>
+                    <li class="liQuetions">
+                        حاصل 3-3*2 چند است؟
+                        <ol class="olAnswers">
+                            <li class="liAnswers">11</li>
+                            <li class="liAnswers">0</li>
+                            <li class="liAnswers">3</li>
+                            <li class="liAnswers">9</li>
+                        </ol>
+                    </li>
+                    <hr>
+                    <li class="liQuetions">
+                        حاصل 12+5 چند است؟
+                        <ol class="olAnswers">
+                            <li class="liAnswers">67</li>
+                            <li class="liAnswers">15</li>
+                            <li class="liAnswers">7</li>
+                            <li class="liAnswers">17</li>
+                        </ol>
+                    </li>
+                    <hr>
+                    <li class="liQuetions">
+                        حاصل 2+2 چند است؟
+                        <ol class="olAnswers">
+                            <li class="liAnswers">4</li>
+                            <li class="liAnswers">5</li>
+                            <li class="liAnswers">0</li>
+                            <li class="liAnswers">1</li>
+                        </ol>
+                    </li>
+                    <hr>
+                    <li class="liQuetions">
+                        حاصل 1+1 چند است؟
+                        <ol class="olAnswers">
+                            <li class="liAnswers">4</li>
+                            <li class="liAnswers">0</li>
+                            <li class="liAnswers">2</li>
+                            <li class="liAnswers">1</li>
+                        </ol>
+                    </li>
+                    <hr>
+                    <li class="liQuetions">
+                        حاصل 1+2 چند است؟
+                        <ol class="olAnswers">
+                            <li class="liAnswers">2</li>
+                            <li class="liAnswers">0</li>
+                            <li class="liAnswers">1</li>
+                            <li class="liAnswers">3</li>
+                        </ol>
+                    </li>
+                    <hr>
+                    <li class="liQuetions">
+                        حاصل 10*3+2 چند است؟
+                        <ol class="olAnswers">
+                            <li class="liAnswers">32</li>
+                            <li class="liAnswers">50</li>
+                            <li class="liAnswers">36</li>
+                            <li class="liAnswers">2</li>
+                        </ol>
+                    </li>
+                    <hr>
+                    <li class="liQuetions">
+                        حاصل 3+5 چند است؟
+                        <ol class="olAnswers">
+                            <li class="liAnswers">2</li>
+                            <li class="liAnswers">8</li>
+                            <li class="liAnswers">10</li>
+                            <li class="liAnswers">9</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+            <div class="answers">
+                <ol class="olAnswerBox">
+                    <li class="liAnswerBox">
+                        <!-- <label for="11">1</label> -->
+                        <input type="radio" name="1" id="11" value="1" class="inputAnswer">
+                        <!-- <label for="12">2</label> -->
+                        <input type="radio" name="1" id="12" value="2" class="inputAnswer">
+                        <!-- <label for="13">3</label> -->
+                        <input type="radio" name="1" id="13" value="3" class="inputAnswer">
+                        <!-- <label for="14">4</label> -->
+                        <input type="radio" name="1" id="14" value="4" class="inputAnswer">
+                    </li>
+                    <li class="liAnswerBox">
+                        <!-- <label for="21">1</label> -->
+                        <input type="radio" name="2" id="21" value="1" class="inputAnswer">
+                        <!-- <label for="22">2</label> -->
+                        <input type="radio" name="2" id="22" value="2" class="inputAnswer">
+                        <!-- <label for="23">3</label> -->
+                        <input type="radio" name="2" id="23" value="3" class="inputAnswer">
+                        <!-- <label for="24">4</label> -->
+                        <input type="radio" name="2" id="24" value="4" class="inputAnswer">
+                    </li>
+                    <li class="liAnswerBox">
+                        <!-- <label for="31">1</label> -->
+                        <input type="radio" name="3" id="31" value="1" class="inputAnswer">
+                        <!-- <label for="32">2</label> -->
+                        <input type="radio" name="3" id="32" value="2" class="inputAnswer">
+                        <!-- <label for="33">3</label> -->
+                        <input type="radio" name="3" id="33" value="3" class="inputAnswer">
+                        <!-- <label for="34">4</label> -->
+                        <input type="radio" name="3" id="34" value="4" class="inputAnswer">
+                    </li>
+                    <li class="liAnswerBox">
+                        <!-- <label for="41">1</label> -->
+                        <input type="radio" name="4" id="41" value="1" class="inputAnswer">
+                        <!-- <label for="42">2</label> -->
+                        <input type="radio" name="4" id="42" value="2" class="inputAnswer">
+                        <!-- <label for="43">3</label> -->
+                        <input type="radio" name="4" id="43" value="3" class="inputAnswer">
+                        <!-- <label for="44">4</label> -->
+                        <input type="radio" name="4" id="44" value="4" class="inputAnswer">
+                    </li>
+                    <li class="liAnswerBox">
+                        <!-- <label for="51">1</label> -->
+                        <input type="radio" name="5" id="51" value="1" class="inputAnswer">
+                        <!-- <label for="52">2</label> -->
+                        <input type="radio" name="5" id="52" value="2" class="inputAnswer">
+                        <!-- <label for="53">3</label> -->
+                        <input type="radio" name="5" id="53" value="3" class="inputAnswer">
+                        <!-- <label for="54">4</label> -->
+                        <input type="radio" name="5" id="54" value="4" class="inputAnswer">
+                    </li>
+                    <li class="liAnswerBox">
+                        <!-- <label for="61">1</label> -->
+                        <input type="radio" name="6" id="61" value="1" class="inputAnswer">
+                        <!-- <label for="62">2</label> -->
+                        <input type="radio" name="6" id="62" value="2" class="inputAnswer">
+                        <!-- <label for="63">3</label> -->
+                        <input type="radio" name="6" id="63" value="3" class="inputAnswer">
+                        <!-- <label for="64">4</label> -->
+                        <input type="radio" name="6" id="64" value="4" class="inputAnswer">
+                    </li>
+                    <li class="liAnswerBox">
+                        <!-- <label for="71">1</label> -->
+                        <input type="radio" name="7" id="71" value="1" class="inputAnswer">
+                        <!-- <label for="72">2</label> -->
+                        <input type="radio" name="7" id="72" value="2" class="inputAnswer">
+                        <!-- <label for="73">3</label> -->
+                        <input type="radio" name="7" id="73" value="3" class="inputAnswer">
+                        <!-- <label for="74">4</label> -->
+                        <input type="radio" name="7" id="74" value="4" class="inputAnswer">
+                    </li>
+                    <li class="liAnswerBox">
+                        <!-- <label for="81">1</label> -->
+                        <input type="radio" name="8" id="81" value="1" class="inputAnswer">
+                        <!-- <label for="82">2</label> -->
+                        <input type="radio" name="8" id="82" value="2" class="inputAnswer">
+                        <!-- <label for="83">3</label> -->
+                        <input type="radio" name="8" id="83" value="3" class="inputAnswer">
+                        <!-- <label for="84">4</label> -->
+                        <input type="radio" name="8" id="84" value="4" class="inputAnswer">
+                    </li>
+                    <li class="liAnswerBox">
+                        <!-- <label for="91">1</label> -->
+                        <input type="radio" name="9" id="91" value="1" class="inputAnswer">
+                        <!-- <label for="92">2</label> -->
+                        <input type="radio" name="9" id="92" value="2" class="inputAnswer"v>
+                        <!-- <label for="93">3</label> -->
+                        <input type="radio" name="9" id="93" value="3" class="inputAnswer">
+                        <!-- <label for="94">4</label> -->
+                        <input type="radio" name="9" id="94" value="4" class="inputAnswer">
+                    </li>
+                    <li class="liAnswerBox">
+                        <!-- <label for="101">1</label> -->
+                        <input type="radio" name="10" id="101" value="1" class="inputAnswer">
+                        <!-- <label for="102">2</label> -->
+                        <input type="radio" name="10" id="102" value="2" class="inputAnswer">
+                        <!-- <label for="103">3</label> -->
+                        <input type="radio" name="10" id="103" value="3" class="inputAnswer">
+                        <!-- <label for="104">4</label> -->
+                        <input type="radio" name="10" id="104" value="4" class="inputAnswer">
+                    </li>
+                </ol>
+                <input type="submit" value="ثبت و اتمام آزمون" class="btnSubmit" onclick="submit()">
+                <hr>
+                <div class="changeType">
+                <p>تغییر حالت گزینه ها:</p>
+                <select name="" id="selectChangeType" onchange="changeType()">
+                    <option value="radio">چهار گزینه ای</option>
+                    <option value="number">عددی</option>
+                    <option value="range">رنج عددی</option>
+                </select>
+            </div>
+            &nbsp;
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
